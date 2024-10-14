@@ -3,35 +3,35 @@
         "id": 1,
         "name": "Anime App",
         "description": "This is project 1",
-        "image": "/src/assets/images/MyNime.png",
+        "image": "/assets/images/MyNime.png",
         "url": "https://github.com/ROFL1ST/MyAnimeStream"
     },
     {
         "id": 2,
         "name": "TrackWalk Ticket Scanner",
         "description": "This is project 2",
-        "image": "../../../src/assets/images/trackwalk.png",
+        "image": "/assets/images/trackwalk.png",
         "url": "https://docs.google.com/presentation/d/1PxOMKJeeRtHVxKMOH_gitHv2haPFYIgG/edit?usp=drive_link&ouid=109077474950325416670&rtpof=true&sd=true"
     },
     {
         "id": 3,
         "name": "Banper Kemenparekraf",
         "description": "This is project 3",
-        "image": "../../../src/assets/images/Banper.png",
+        "image": "/assets/images/Banper.png",
         "url": "https://banper.kemenparekraf.go.id/"
     },
     {
         "id": 4,
         "name": "PlanetPulse Academy",
         "description": "This is project 4",
-        "image": "../../../src/assets/images/planetpulse.jpeg",
+        "image": "/assets/images/planetpulse.jpeg",
         "url": "https://github.com/Planet-Pulse-Academy"
     },
     {
         "id": 5,
         "name": "Task Management App",
         "description": "This is project 5",
-        "image": "../../../src/assets/images/Todo.png",
+        "image": "/assets/images/Todo.png",
         "url": "https://github.com/ROFL1ST/todo-app"
     }
 

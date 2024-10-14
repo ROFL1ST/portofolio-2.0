@@ -1,10 +1,10 @@
 
 import Hamburger from "hamburger-react";
 import React from "react";
-import CV from "../assets/json/CV.json";
+import cvData from "../assets/file/CV_Danendra.pdf";
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const cvData = CV.map((i, key) => i.path);
+;
 
   return (
     <>
@@ -84,7 +84,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href={cvData[0]} // Update this to the actual path of your CV
+                href={cvData} // Update this to the actual path of your CV
                 download
                 className="bg-yellow-500 text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:bg-yellow-400 hover:scale-105"
               >
@@ -203,7 +203,7 @@ export default function Navbar() {
               </li>
               <li>
                 <a
-                  href={cvData[0]} // Update this to the actual path of your CV
+                  href={cvData} // Update this to the actual path of your CV
                   download
                   className="bg-yellow-500 text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:bg-yellow-400 hover:scale-105"
                 >

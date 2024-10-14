@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Anime App",
         "description": "This is project 1",
-        "image": "/src/assets/images/MyNime.png",
+        "image": "/public/assets/images/MyNime.png",
         "url": "https://github.com/ROFL1ST/MyAnimeStream"
     },
     {
@@ -31,7 +31,7 @@
         "id": 5,
         "name": "Task Management App",
         "description": "This is project 5",
-        "image": "../../../src/assets/images/Todo.png",
+        "image": "https://drive.google.com/file/d/1G_S6adEUqkjJGJR4IRsnjKhz_RKrlEdI/view?usp=drive_link",
         "url": "https://github.com/ROFL1ST/todo-app"
     }
 
