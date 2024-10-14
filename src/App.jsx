@@ -4,7 +4,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import { motion, useScroll } from "framer-motion";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer";
 
 export default function App() {
