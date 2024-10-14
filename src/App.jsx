@@ -52,27 +52,11 @@ export default function App() {
     }, 2000);
   }
 
-  // React.useEffect(() => {
-   
-  //   window.scrollTo(0, 0);
-  // }, []); 
   return (
     <>
-      {/* <motion.div
-        style={{ scaleX: scrollYProgress }}
-        className="progress-bar"
-      /> */}
-      {/* <motion.div
-        animate={variantCursor}
-        variants={variants}
-        className={`cursor `}
-        style={{ background: cursorColor }}
-      /> */}
+  
       <Navbar
-        setCursorColor={setCursorColor}
-        textEnter={textEnter}
-        textLeave={textLeave}
-        socialEnter={socialEnter}
+     
       />
       <Routes>
         <Route
