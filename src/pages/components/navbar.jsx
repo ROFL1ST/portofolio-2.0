@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
+
 import Hamburger from "hamburger-react";
 import React from "react";
 import CV from "../../assets/json/CV.json";

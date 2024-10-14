@@ -16,8 +16,6 @@ export default function App() {
   const [variantCursor, setVariantCursor] = React.useState("default");
   const [cursorColor, setCursorColor] = React.useState("#FFD700");
 
- 
-
   const variants = {
     default: {
       x: mousePosition.x - 16,
@@ -54,10 +52,7 @@ export default function App() {
 
   return (
     <>
-  
-      <Navbar
-     
-      />
+      <Navbar />
       <Routes>
         <Route
           path="/"
@@ -71,7 +66,7 @@ export default function App() {
           }
         />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }
