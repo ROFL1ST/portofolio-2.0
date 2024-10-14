@@ -108,7 +108,7 @@ function Experiences({ i }) {
   }, []);
 
   return (
-    <div ref={experienceRef} className="experiences flex gap-8 text-white">
+    <div ref={experienceRef} className="experiences flex gap-x-8 text-white">
       <div className="line">
         <div></div>
       </div>

@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { Parallax } from "react-parallax";
-import bg from "../../assets/images/daniel-leone-g30P1zcOzXo-unsplash.jpg";
 import About from "./sections/about";
 import Project from "./sections/project";
 import Cloud from "../../components/Cloud";

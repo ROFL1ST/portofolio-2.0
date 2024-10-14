@@ -1,10 +1,10 @@
 
 import Hamburger from "hamburger-react";
 import React from "react";
-import cvData from "../assets/file/CV_Danendra.pdf";
+import cvData from "/assets/file/CV_Danendra.pdf";
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-;
+
 
   return (
     <>

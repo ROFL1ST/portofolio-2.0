@@ -2,35 +2,35 @@
     {
         "id": 1,
         "name": "Anime App",
-        "description": "This is project 1",
+        "description": "Anime watching app with a simple and elegant design. This app is made using Flutter",
         "image": "/assets/images/MyNime.png",
         "url": "https://github.com/ROFL1ST/MyAnimeStream"
     },
     {
         "id": 2,
         "name": "TrackWalk Ticket Scanner",
-        "description": "This is project 2",
+        "description": "Scanner App for TrackWalk Event. This app is made using Flutter",
         "image": "/assets/images/trackwalk.png",
         "url": "https://docs.google.com/presentation/d/1PxOMKJeeRtHVxKMOH_gitHv2haPFYIgG/edit?usp=drive_link&ouid=109077474950325416670&rtpof=true&sd=true"
     },
     {
         "id": 3,
         "name": "Banper Kemenparekraf",
-        "description": "This is project 3",
+        "description": "A Website for Banper Kemenparekraf. This website is made using React JS",
         "image": "/assets/images/Banper.png",
         "url": "https://banper.kemenparekraf.go.id/"
     },
     {
         "id": 4,
         "name": "PlanetPulse Academy",
-        "description": "This is project 4",
+        "description": "An Online Course made by PlanetPulse Academy. This app is made using Kotlin",
         "image": "/assets/images/planetpulse.jpeg",
         "url": "https://github.com/Planet-Pulse-Academy"
     },
     {
         "id": 5,
         "name": "Task Management App",
-        "description": "This is project 5",
+        "description": "A simple task management app. This app is made using Flutter",
         "image": "/assets/images/Todo.png",
         "url": "https://github.com/ROFL1ST/todo-app"
     }
