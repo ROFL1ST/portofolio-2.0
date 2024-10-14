@@ -4,7 +4,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import { motion, useScroll } from "framer-motion";
-import Navbar from "./pages/components/navbar";
+import Navbar from "./pages/components/Navbar";
+import Footer from "./pages/components/Footer";
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -15,19 +16,7 @@ export default function App() {
   const [variantCursor, setVariantCursor] = React.useState("default");
   const [cursorColor, setCursorColor] = React.useState("#FFD700");
 
-  React.useEffect(() => {
-    const mouseMove = (e) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY,
-      });
-    };
-    window.addEventListener("mousemove", mouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", mouseMove);
-    };
-  }, []);
+ 
 
   const variants = {
     default: {
@@ -62,18 +51,23 @@ export default function App() {
       setLoading(false);
     }, 2000);
   }
+
+  // React.useEffect(() => {
+   
+  //   window.scrollTo(0, 0);
+  // }, []); 
   return (
     <>
-      <motion.div
+      {/* <motion.div
         style={{ scaleX: scrollYProgress }}
         className="progress-bar"
-      />
-      <motion.div
+      /> */}
+      {/* <motion.div
         animate={variantCursor}
         variants={variants}
         className={`cursor `}
         style={{ background: cursorColor }}
-      />
+      /> */}
       <Navbar
         setCursorColor={setCursorColor}
         textEnter={textEnter}
@@ -81,8 +75,19 @@ export default function App() {
         socialEnter={socialEnter}
       />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <Home
+              textEnter={textEnter}
+              textLeave={textLeave}
+              socialEnter={socialEnter}
+              setCursorColor={setCursorColor}
+            />
+          }
+        />
       </Routes>
+      <Footer/>
     </>
   );
 }

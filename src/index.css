@@ -3,8 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  background-color: #213547;
+:root{
+  background-color: #F5F5F5;
 }
 
 html {
