@@ -4,7 +4,7 @@ import { Parallax } from "react-parallax";
 import bg from "../../assets/images/daniel-leone-g30P1zcOzXo-unsplash.jpg";
 import About from "./sections/about";
 import Project from "./sections/project";
-import Cloud from "../components/Cloud";
+import Cloud from "../../components/Cloud";
 import Services from "./sections/services";
 import Contact from "./sections/contact";
 export default function Home({

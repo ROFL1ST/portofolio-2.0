@@ -4,8 +4,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import { motion, useScroll } from "framer-motion";
-import Navbar from "./pages/components/Navbar";
-import Footer from "./pages/components/Footer";
+import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
 
 export default function App() {
   const { scrollYProgress } = useScroll();

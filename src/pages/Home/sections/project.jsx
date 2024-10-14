@@ -1,6 +1,6 @@
 import React from "react";
 import { Parallax } from "react-parallax";
-import Title from "../../components/Title";
+import Title from "../../../components/Title";
 import data from "../../../assets/json/projects.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -66,7 +66,7 @@ export default function Project() {
 }
 
 import PropTypes from "prop-types";
-import Cloud from "../../components/Cloud";
+import Cloud from "../../../components/Cloud";
 
 const ProjectCard = ({ project }) => {
   return (

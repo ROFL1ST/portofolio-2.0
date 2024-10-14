@@ -1,7 +1,7 @@
 
 import Hamburger from "hamburger-react";
 import React from "react";
-import CV from "../../assets/json/CV.json";
+import CV from "../assets/json/CV.json";
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const cvData = CV.map((i, key) => i.path);

@@ -1,6 +1,6 @@
 import React from "react";
 import { Parallax } from "react-parallax";
-import Title from "../../components/Title";
+import Title from "../../../components/Title";
 import { Player } from "@lottiefiles/react-lottie-player";
 import emailjs from "@emailjs/browser";
 import ilustrate from "../../../assets/json/contact-animation.json";
