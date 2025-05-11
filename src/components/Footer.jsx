@@ -1,4 +1,3 @@
-
 import useTheme from "../useTheme";
 
 export default function Footer() {
@@ -6,9 +5,17 @@ export default function Footer() {
 
   return (
     <div className="flex lg:flex-row flex-col lg:gap-y-0 lg:items-center gap-y-5 justify-between w-full lg:px-20 px-10 py-10 bg-white dark:bg-[#00111c]">
-      <h1 className="sm:text-5xl text-4xl text-black dark:text-[#E5E5E5] logo cursor-pointer">
-        <span className="text-yellow-500">Danen</span>dra
-      </h1>
+      <div className="flex flex-col gap-y-1">
+        <h1 className="sm:text-5xl text-4xl text-black dark:text-[#E5E5E5] logo cursor-pointer">
+          <span className="text-yellow-500">Danen</span>dra
+        </h1>
+        <p className="text-sm text-black dark:text-[#E5E5E5]">
+          Vectors and icons by{" "}
+          <a href="https://www.svgrepo.com" className="font-bold" target="_blank" rel="noreferrer">
+            SVG Repo
+          </a>
+        </p>
+      </div>
       <ul className="flex gap-x-5 z-20 ">
         <li className=" hover:-translate-y-1 ease-in-out transition hover:scale-110">
           <a href="https://www.instagram.com/rofl1st">
