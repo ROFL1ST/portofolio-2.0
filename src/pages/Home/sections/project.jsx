@@ -25,16 +25,14 @@ export default function Project() {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); 
+    handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const calculateTotalGroups = (dataLength, slidesPerView) => {
-    
     const totalGroups = Math.ceil(dataLength / slidesPerView);
 
-    
     if (dataLength % slidesPerView !== 0) {
       if (slidesPerView != 4) {
         return totalGroups + 1;
@@ -55,19 +53,19 @@ export default function Project() {
       </div>
       <div
         id="projects"
-        className="w-full h-full flex justify-center flex-col items-start py-32 pb-36 lg:px-20 px-10 gap-y-10 bg-gray-50"
+        className="w-full h-full flex justify-center flex-col items-start py-32 pb-36 lg:px-20 px-10 gap-y-10 bg-gray-50 dark:bg-[#00111c]"
       >
         {/* Title */}
         <Title
           textTop={"My"}
           textBottom={"Projects"}
-          textColorTop="text-gray-800"
+          textColorTop="text-gray-800 dark:text-[#E5E5E5]"
           textColorBottom="text-[#FFD700]"
         />
 
         {/* Content */}
         <div className="flex flex-col gap-y-5 w-4/5">
-          <p className="text-gray-700 font-semibold text-lg w-11/12">
+          <p className="text-gray-700 dark:text-[#E5E5E5] font-semibold text-lg w-11/12">
             Here&apos;s my latest projects that I&apos;ve been working on.
             I&apos;m always looking for new projects to work on, so if you have
             a project in mind, feel free to reach out to me.
@@ -121,9 +119,7 @@ export default function Project() {
                     swiperRef.current.slideTo(index * slidesPerView)
                   }
                   className={`w-3 h-3 rounded-full ${
-                    activeIndex === index
-                      ? "bg-[#FFD700]"
-                      : "bg-gray-300"
+                    activeIndex === index ? "bg-[#FFD700]" : "bg-gray-300 dark:bg-gray-700"
                   } transition-all duration-200`}
                 ></button>
               ))}
@@ -169,7 +165,7 @@ const ProjectCard = ({ project }) => {
       onClick={() => {
         window.open(project.url, "_blank");
       }}
-      className="h-96 rounded-2xl w-full p-5 text-white border border-gray-300 shadow-lg transition-transform duration-300 hover:shadow-xl cursor-pointer"
+      className="h-96 rounded-2xl w-full p-5 text-white border border-gray-300 shadow-lg transition-transform duration-300 hover:shadow-xl cursor-pointer dark:border-gray-700 dark:shadow-gray-700"
     >
       <div
         style={{
@@ -177,14 +173,18 @@ const ProjectCard = ({ project }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           borderRadius: "1rem",
-          // filter: "brightness(0.85)", // Slightly brighter image
+          filter: "brightness(0.85)", // Slightly darker image for better contrast
         }}
-        className="w-full h-full flex rounded-xl flex-col justify-center items-center transition-all duration-200 hover:scale-105 hover:text-[#FFD700]"
+        className="w-full h-full flex rounded-xl flex-col justify-center items-center transition-all duration-200 hover:scale-105 hover:text-[#FFD700] dark:text-[#E5E5E5] dark:hover:text-[#FFD700]"
       >
-        <div className="w-full h-full flex justify-start items-end p-5 rounded-xl bg-gradient-to-b from-transparent to-black/30 transition-all duration-300 ">
+        <div className="w-full h-full flex justify-start items-end p-5 rounded-xl bg-gradient-to-b from-transparent to-black/30 dark:bg-gradient-to-b dark:from-transparent dark:to-black/60 transition-all duration-300">
           <div className="flex flex-col transition-opacity duration-300 hover:opacity-100">
-            <h3 className="font-bold text-xl ">{project.name}</h3>
-            <p className="text-sm">{project.description}</p>
+            <h3 className="font-bold text-xl ">
+              {project.name}
+            </h3>
+            <p className="text-sm ">
+              {project.description}
+            </p>
           </div>
         </div>
       </div>

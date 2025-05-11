@@ -12,7 +12,7 @@ const Stars = () => {
   }, []);
 
   return (
-    <div className="stars-container">
+    <div className="stars-container z-50">
       {stars.map((star, i) => (
         <div
           key={i}
