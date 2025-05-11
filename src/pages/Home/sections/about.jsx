@@ -1,19 +1,13 @@
 /* eslint-disable react/prop-types */
-import { Disclosure } from "@headlessui/react";
 import React from "react";
 import { Parallax } from "react-parallax";
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
+
 import data from "../../../assets/json/experience.json";
 import Stars from "../../../components/Stars";
 import Title from "../../../components/Title";
-import IconReact from "../../../assets/icons/react-svgrepo-com.svg";
+
 import SkillsData from "../../../assets/json/skills.json";
-export default function About({
-  setCursorColor,
-  textEnter,
-  textLeave,
-  logoEnter,
-}) {
+export default function About() {
   return (
     <>
       <Parallax strength={300}>

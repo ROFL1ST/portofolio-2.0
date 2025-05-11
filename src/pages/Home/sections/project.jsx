@@ -123,7 +123,7 @@ export default function Project() {
                     swiperRef.current.slideTo(index * slidesPerView)
                   }
                   className={`w-3 h-3 rounded-full ${
-                    swiperRef.current?.activeIndex === index
+                    activeIndex === index
                       ? "bg-[#FFD700]"
                       : "bg-gray-300"
                   } transition-all duration-200`}

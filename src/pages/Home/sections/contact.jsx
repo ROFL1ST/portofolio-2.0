@@ -6,18 +6,20 @@ import emailjs from "@emailjs/browser";
 import ilustrate from "../../../assets/json/contact-animation.json";
 export default function Contact() {
   const [toSend, setToSend] = React.useState({
-    user_name: "",
-    user_email: "",
+    sender_name: "",
+    sender_email: "",
     message: "",
   });
   const form = React.useRef();
   const [load, setLoad] = React.useState(false);
   const onSubmit = (e) => {
     setLoad(true);
+    // console.log(import.meta.env.VITE_SOME_KEY);
+
     e.preventDefault();
     if (
-      toSend.user_name == "" ||
-      toSend.user_email == "" ||
+      toSend.sender_name == "" ||
+      toSend.sender_email == "" ||
       toSend.message == ""
     ) {
       setLoad(false);
@@ -25,23 +27,23 @@ export default function Contact() {
     } else {
       emailjs
         .sendForm(
-          process.env.REACT_APP_EMAIL_KEY,
-          process.env.REACT_APP_TEMPLATE_KEY,
+          `${import.meta.env.VITE_EMAIL_KEY}`,
+          `${import.meta.env.VITE_TEMPLATE_KEY}`,
           form.current,
-          process.env.REACT_APP_PUBLIC_KEY
+          `${import.meta.env.VITE_PUBLIC_KEY}`,
+          `${import.meta.env.VITE_PRIVATE_KEY}`
         )
-        .then(
-          () => {
-            console.log("HAI");
-          },
-          (error) => {
-            console.log(error);
+        .then((res) => {
+          console.log("HAI");
+          if (res.status === 200) {
+            setLoad(false);
+            alert("Pesan anda sudah terkirim");
           }
-        );
+        });
       setLoad(false);
 
       e.target.reset();
-      setToSend({ user_email: "", user_name: "", message: "" });
+      setToSend({ sender_name: "", sender_email: "", message: "" });
     }
   };
 
@@ -71,7 +73,7 @@ export default function Contact() {
               {/* title */}
               <div className="flex flex-col gap-y-1 mb-5">
                 <h2 className="font-bold text-2xl">
-                  We'd love to hear it from you
+                  We&apos;d love to hear it from you
                 </h2>
                 <p>You Can Reach Us Anytime</p>
               </div>
@@ -85,9 +87,9 @@ export default function Contact() {
                   <input
                     type="text"
                     id="name"
-                    name="user_name"
+                    name="sender_name"
                     onChange={handleChange}
-                    value={toSend.user_name}
+                    value={toSend.sender_name}
                     placeholder="Your Name"
                     className="w-full bg-white text-gray-800 rounded-lg border border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none placeholder-gray-500 py-3 px-4 leading-8 transition duration-300 ease-in-out"
                   />
@@ -97,9 +99,9 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
-                    name="user_email"
+                    name="sender_email"
                     onChange={handleChange}
-                    value={toSend.user_email}
+                    value={toSend.sender_email}
                     placeholder="Your Email"
                     className="w-full bg-white text-gray-800 rounded-lg border border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none placeholder-gray-500 py-3 px-4 leading-8 transition duration-300 ease-in-out"
                   />
@@ -115,7 +117,7 @@ export default function Contact() {
                     className="w-full bg-white text-gray-800 rounded-lg border border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 h-36 text-base outline-none placeholder-gray-500 py-3 px-4 resize-none leading-8 transition duration-300 ease-in-out"
                   ></textarea>
                 </div>
-
+                <input type="hidden" name="user_name" value="Danendra" />
                 <button
                   disabled={load ? true : false}
                   className={`text-white bg-yellow-500 transition duration-300 ease-in-out transform hover:bg-yellow-400 border-0 py-3 px-8 focus:outline-none rounded-lg text-lg shadow-md ${
