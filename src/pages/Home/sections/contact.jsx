@@ -90,7 +90,7 @@ export default function Contact() {
                     onChange={handleChange}
                     value={toSend.sender_name}
                     placeholder="Your Name"
-                    className="w-full bg-white dark:bg-night-sky text-gray-800 rounded-lg border border-gray-300 dark:border-gray-700 shadow-sm focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 text-base outline-none placeholder-gray-500 py-3 px-4 leading-8 transition duration-300 ease-in-out"
+                    className="w-full bg-white dark:bg-night-sky text-gray-800 rounded-lg border border-gray-300 dark:border-gray-700 shadow-sm focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 text-base outline-none placeholder-gray-500 dark:text-gray-300 py-3 px-4 leading-8 transition duration-300 ease-in-out"
                   />
                 </div>
 
@@ -102,7 +102,7 @@ export default function Contact() {
                     onChange={handleChange}
                     value={toSend.sender_email}
                     placeholder="Your Email"
-                    className="w-full bg-white dark:bg-night-sky text-gray-800 rounded-lg border border-gray-300 dark:border-gray-700 shadow-sm focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 text-base outline-none placeholder-gray-500 py-3 px-4 leading-8 transition duration-300 ease-in-out"
+                    className="w-full bg-white dark:bg-night-sky text-gray-800 rounded-lg border border-gray-300 dark:border-gray-700 shadow-sm focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 text-base outline-none placeholder-gray-500 dark:text-gray-300 py-3 px-4 leading-8 transition duration-300 ease-in-out"
                   />
                 </div>
 
@@ -113,7 +113,7 @@ export default function Contact() {
                     onChange={handleChange}
                     value={toSend.message}
                     placeholder="Your Message"
-                    className="w-full bg-white dark:bg-night-sky text-gray-800 rounded-lg border border-gray-300 dark:border-gray-700 shadow-sm focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 h-36 text-base outline-none placeholder-gray-500 py-3 px-4 resize-none leading-8 transition duration-300 ease-in-out"
+                    className="w-full bg-white dark:bg-night-sky text-gray-800 rounded-lg border border-gray-300 dark:border-gray-700 shadow-sm focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 h-36 text-base outline-none placeholder-gray-500 dark:text-gray-300 py-3 px-4 resize-none leading-8 transition duration-300 ease-in-out"
                   ></textarea>
                 </div>
                 <input type="hidden" name="user_name" value="Danendra" />
