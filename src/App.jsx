@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import { motion, useScroll } from "framer-motion";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -67,6 +68,7 @@ export default function App() {
         />
       </Routes>
       <Footer />
+      <Analytics />
     </>
   );
 }
