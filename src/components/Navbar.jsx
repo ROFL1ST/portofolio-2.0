@@ -3,6 +3,11 @@ import React from "react";
 import cvData from "/assets/file/CV_Danendra.pdf";
 import useTheme from "../useTheme";
 import { Switch } from "@headlessui/react";
+import DarkModeToggle from "./MobileDark";
+import { motion, AnimatePresence } from "framer-motion";
+// Pastikan Anda memiliki Heroicons
+
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const { isDarkMode, setIsDarkMode } = useTheme();
@@ -28,9 +33,35 @@ export default function Navbar() {
                 className={`inline-block h-6 w-6 transform rounded-full shadow-lg ring-0 transition-transform duration-300 ease-in-out ${
                   isDarkMode
                     ? "translate-x-8 bg-[#FFD700]"
-                    : "translate-x-0   bg-[#E5E5E5]"
+                    : "translate-x-0 bg-[#E5E5E5]"
                 }`}
-              />
+              >
+                <AnimatePresence mode="wait" initial={false}>
+                  {isDarkMode ? (
+                    <motion.div
+                      key="moon"
+                      initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
+                      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                      exit={{ opacity: 0, scale: 0.5, rotate: 90 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex items-center justify-center h-full w-full"
+                    >
+                      <MoonIcon className="h-4 w-4 text-gray-800" />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="sun"
+                      initial={{ opacity: 0, scale: 0.5, rotate: 90 }}
+                      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                      exit={{ opacity: 0, scale: 0.5, rotate: -90 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex items-center justify-center h-full w-full"
+                    >
+                      <SunIcon className="h-4 w-4 text-yellow-500" />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </span>
             </Switch>
 
             <li className=" hover:-translate-y-1 ease-in-out transition hover:scale-110">
@@ -111,7 +142,8 @@ export default function Navbar() {
               </a>
             </li>
           </ul>
-          <div className="flex lg:hidden items-center justify-center dark:text-[#E5E5E5]  z-50">
+          <div className="flex lg:hidden gap-x-5 items-center justify-center dark:text-[#E5E5E5]  z-50">
+            <DarkModeToggle />
             <Hamburger size={30} toggled={navbarOpen} toggle={setNavbarOpen} />
           </div>
         </div>
