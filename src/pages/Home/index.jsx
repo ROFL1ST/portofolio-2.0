@@ -12,7 +12,6 @@ export default function Home({
   setCursorColor,
   socialEnter,
 }) {
-  const ref = React.useRef([]);
   const getRandomPosition = (min, max) =>
     Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -119,7 +118,7 @@ export default function Home({
       </div>
       {/* Projects */}
       {/* Contact */}
-      <Contact/>
+      <Contact />
       {/* Contact */}
     </>
   );

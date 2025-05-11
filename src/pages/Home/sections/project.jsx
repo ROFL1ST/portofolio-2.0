@@ -5,9 +5,51 @@ import data from "../../../assets/json/projects.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Navigation } from "swiper/modules";
 
 export default function Project() {
+  const swiperRef = React.useRef();
+  const [activeIndex, setActiveIndex] = React.useState(0);
+  const [slidesPerView, setSlidesPerView] = React.useState(1);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1560) {
+        setSlidesPerView(4);
+      } else if (window.innerWidth >= 1024) {
+        setSlidesPerView(3);
+      } else if (window.innerWidth >= 768) {
+        setSlidesPerView(2);
+      } else {
+        setSlidesPerView(1);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); 
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const calculateTotalGroups = (dataLength, slidesPerView) => {
+    
+    const totalGroups = Math.ceil(dataLength / slidesPerView);
+
+    
+    if (dataLength % slidesPerView !== 0) {
+      if (slidesPerView != 4) {
+        return totalGroups + 1;
+      } else {
+        return totalGroups;
+      }
+    }
+
+    return totalGroups;
+  };
+  // Contoh:
+  const totalGroups = calculateTotalGroups(data.length, slidesPerView);
+  console.log("Total groups:", totalGroups);
+  console.log("Slides per view:", slidesPerView);
+
   return (
     <Parallax strength={300}>
       <div className="absolute right-10 top-40 flex flex-col items-end">
@@ -15,7 +57,7 @@ export default function Project() {
       </div>
       <div
         id="projects"
-        className="w-full h-full flex justify-center flex-col items-start py-32 pb-36 lg:px-20 px-10 gap-y-10 bg-gray-50" // Light background
+        className="w-full h-full flex justify-center flex-col items-start py-32 pb-36 lg:px-20 px-10 gap-y-10 bg-gray-50"
       >
         {/* Title */}
         <Title
@@ -27,17 +69,26 @@ export default function Project() {
 
         {/* Content */}
         <div className="flex flex-col gap-y-5 w-4/5">
-          <p className="text-gray-700 font-semibold text-lg  w-11/12">
+          <p className="text-gray-700 font-semibold text-lg w-11/12">
             Here&apos;s my latest projects that I&apos;ve been working on.
             I&apos;m always looking for new projects to work on, so if you have
             a project in mind, feel free to reach out to me.
           </p>
         </div>
 
-        <div className="w-full">
+        <div className="w-full lg:inline hidden">
           <Swiper
-            slidesPerView={1}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            slidesPerView={slidesPerView}
             spaceBetween={30}
+            className="mySwiper"
+            pagination={{
+              el: swiperRef.current,
+              clickable: true,
+            }}
+            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -48,6 +99,10 @@ export default function Project() {
                 spaceBetween: 10,
               },
               1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              1560: {
                 slidesPerView: 4,
                 spaceBetween: 30,
               },
@@ -59,6 +114,44 @@ export default function Project() {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="flex justify-between w-full items-center 2xl:mt-10 mt-5">
+            <div className="flex justify-center space-x-2 mt-5 lg:mt-0">
+              {Array.from({ length: totalGroups }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() =>
+                    swiperRef.current.slideTo(index * slidesPerView)
+                  }
+                  className={`w-3 h-3 rounded-full ${
+                    activeIndex === index
+                      ? "bg-[#FFD700]"
+                      : "bg-gray-300"
+                  } transition-all duration-200`}
+                ></button>
+              ))}
+            </div>
+            <div className="lg:flex hidden justify-end space-x-3 items-center">
+              <button onClick={() => swiperRef.current.slidePrev()}>
+                <ArrowLeftCircleIcon
+                  className="lg:h-9 lg:w-9 2xl:h-12 2xl:w-12 text-[#FFD700] transition-all duration-200 hover:scale-105"
+                  strokeWidth={1}
+                />
+              </button>
+              <button onClick={() => swiperRef.current.slideNext()}>
+                <ArrowRightCircleIcon
+                  className="lg:h-9 lg:w-9 2xl:h-12 2xl:w-12 text-[#FFD700] transition-all duration-200 hover:scale-105"
+                  strokeWidth={1}
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile View */}
+        <div className="lg:hidden flex flex-col gap-y-5 w-full">
+          {data.map((project, key) => (
+            <ProjectCard key={key} project={project} />
+          ))}
         </div>
       </div>
     </Parallax>
@@ -67,6 +160,10 @@ export default function Project() {
 
 import PropTypes from "prop-types";
 import Cloud from "../../../components/Cloud";
+import {
+  ArrowLeftCircleIcon,
+  ArrowRightCircleIcon,
+} from "@heroicons/react/24/solid";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -102,5 +199,6 @@ ProjectCard.propTypes = {
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
   }).isRequired,
 };
