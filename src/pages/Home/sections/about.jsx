@@ -15,7 +15,6 @@ export default function About() {
           id="about"
           className="w-full bg-night-sky dark:bg-[#070F2B] h-full flex justify-center flex-col items-start py-32 pb-36 lg:px-20 px-10 gap-y-10 rounded-b-3xl" // Add rounded bottom here
           style={{
-           
             zIndex: 1,
             position: "relative",
             borderBottomLeftRadius: "2rem", // Add rounded corners for bottom left
@@ -29,12 +28,12 @@ export default function About() {
           {/* title */}
           <div className=" flex flex-col  lg:w-4/5">
             <p className="text-white dark:text-[#E5E5E5] font-semibold text-lg pb-20 w-11/12">
-              Hi, I’m Muhamad Danendra Prawiraamijoyo. I’m a Front End Developer and Android Developer
-              based on Jakarta. As a recent computer science graduate with six
-              months of experience at a startup company, I am excited to bring
-              my coding skills and passion for problem-solving to a new team. I
-              am looking for an opportunity to make a meaningful impact on the
-              industry, and to continue learning and growing as a programmer.
+              Hi, I’m Muhamad Danendra Prawiraamijoyo. I’m an IT Developer based
+              on Jakarta. As a recent computer science graduate with 2 years of
+              experience, I am excited to bring my coding skills and passion for
+              problem-solving to a new team. I am looking for an opportunity to
+              make a meaningful impact on the industry, and to continue learning
+              and growing as a programmer.
             </p>
             <div className="lg:justify-between justify-center flex flex-col lg:flex-row w-full">
               <div className="lg:w-1/3 left">
@@ -51,13 +50,22 @@ export default function About() {
                 </div>
               </div>
               <div className=" lg:w-1/3 w-full">
-                <h1 className="text-white dark:text-[#E5E5E5] font-semibold text-2xl">Skills</h1>
+                <h1 className="text-white dark:text-[#E5E5E5] font-semibold text-2xl">
+                  Skills
+                </h1>
                 <div className="grid lg:grid-cols-4 grid-cols-3 relative gap-5 mt-10 ">
                   {SkillsData.map((i, key) => (
                     <>
-                      <div key={key} className="flex flex-col items-center justify-center">
+                      <div
+                        key={key}
+                        className="flex flex-col items-center justify-center"
+                      >
                         <div className="kotak1 p-5 rounded-2xl bg-[#080E14]  flex justify-center items-center">
-                          <img className="max-w-[60px] min-w-[20px]" src={i.image} alt="" />
+                          <img
+                            className="max-w-[60px] min-w-[20px]"
+                            src={i.image}
+                            alt=""
+                          />
                         </div>
                         <p className="text-white dark:text-[#E5E5E5] font-bold text-base mt-2">
                           {i.name}
