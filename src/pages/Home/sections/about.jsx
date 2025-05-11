@@ -29,7 +29,7 @@ export default function About() {
           {/* title */}
           <div className=" flex flex-col  lg:w-4/5">
             <p className="text-white dark:text-[#E5E5E5] font-semibold text-lg pb-20 w-11/12">
-              Hi, I’m Danendra. I’m a Front End Developer and Android Developer
+              Hi, I’m Muhamad Danendra Prawiraamijoyo. I’m a Front End Developer and Android Developer
               based on Jakarta. As a recent computer science graduate with six
               months of experience at a startup company, I am excited to bring
               my coding skills and passion for problem-solving to a new team. I
