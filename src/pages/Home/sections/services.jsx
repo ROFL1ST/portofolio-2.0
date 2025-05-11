@@ -3,7 +3,6 @@ import {
   DevicePhoneMobileIcon,
   ServerIcon,
 } from "@heroicons/react/24/solid";
-import React from "react";
 
 export default function Services() {
   return (

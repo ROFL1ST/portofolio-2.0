@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 const Stars = () => {
   // Pre-calculate star properties once using useMemo
-  const stars = useMemo(() => {
+  const stars = React.useMemo(() => {
     return Array.from({ length: 200 }, () => ({
       top: `${Math.random() * 100}vh`,
       left: `${Math.random() * 100}vw`,

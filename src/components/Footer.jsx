@@ -1,4 +1,4 @@
-import React from "react";
+
 import useTheme from "../useTheme";
 
 export default function Footer() {

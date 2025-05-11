@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
-import React from "react";
 import { Parallax } from "react-parallax";
 import About from "./sections/about";
 import Project from "./sections/project";
 import Cloud from "../../components/Cloud";
 import Services from "./sections/services";
 import Contact from "./sections/contact";
-import Stars from "../../components/Stars";
 export default function Home({
   textEnter,
   textLeave,
