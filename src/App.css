@@ -174,15 +174,32 @@
   animation: float 6s ease-in-out infinite;
 }
 
+.animate-cloud-forward {
+  position: absolute;
+  animation: forwardBackward 6s ease-in-out infinite;
+}
+
 @keyframes float {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes forwardBackward {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
