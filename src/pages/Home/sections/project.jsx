@@ -47,8 +47,6 @@ export default function Project() {
   };
   // Contoh:
   const totalGroups = calculateTotalGroups(data.length, slidesPerView);
-  console.log("Total groups:", totalGroups);
-  console.log("Slides per view:", slidesPerView);
 
   return (
     <Parallax strength={300}>
