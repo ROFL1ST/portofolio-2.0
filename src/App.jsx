@@ -51,24 +51,28 @@ export default function App() {
     }, 2000);
   }
 
+  // dark mode
+
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              textEnter={textEnter}
-              textLeave={textLeave}
-              socialEnter={socialEnter}
-              setCursorColor={setCursorColor}
-            />
-          }
-        />
-      </Routes>
-      <Footer />
-      <Analytics />
+      <div className="dark:bg-[#00111c] bg-white">
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                textEnter={textEnter}
+                textLeave={textLeave}
+                socialEnter={socialEnter}
+                setCursorColor={setCursorColor}
+              />
+            }
+          />
+        </Routes>
+        <Footer />
+        <Analytics />
+      </div>
     </>
   );
 }

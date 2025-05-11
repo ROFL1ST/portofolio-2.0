@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import React from "react";
 import { Parallax } from "react-parallax";
 import About from "./sections/about";
 import Project from "./sections/project";
@@ -25,23 +24,23 @@ export default function Home({
 
   return (
     <>
-      <section className="z-0">
+      <section className="z-0  ">
         <Parallax strength={300} bgClassName="background-cover">
           <div className="w-full h-screen flex justify-center flex-col items-center py-20 px-10 gap-y-48 relative">
             <div className="flex flex-col text-black justify-center items-center text-center font-bold">
-              <h1 className="lg:text-6xl text-4xl z-20 transition-transform duration-500 hover:scale-105">
+              <h1 className="lg:text-6xl text-4xl dark:text-[#E5E5E5] z-20 transition-transform duration-500 hover:scale-105">
                 Make Your{" "}
                 <span className="text-[#FFD700] font-bold">Website</span>
               </h1>
-              <h1 className="lg:text-6xl text-4xl mb-10 z-20 transition-transform duration-500 hover:scale-105">
+              <h1 className="lg:text-6xl dark:text-[#E5E5E5] text-4xl mb-10 z-20 transition-transform duration-500 hover:scale-105">
                 Or <span className="text-[#FFD700] font-bold">App</span> With Us
               </h1>
-              <p className="lg:w-3/4 lg:text-base text-base z-20 text-gray-800">
+              <p className="lg:w-3/4 lg:text-base text-base z-20 text-gray-800 dark:text-[#E5E5E5]">
                 Design Your Imaginary Website or Application and Build It With
                 Me
               </p>
             </div>
-            <div className="z-0 lg:p-40 p-44 rounded-full absolute lg:top-52 top-32 bg-gradient-to-t from-[#FFD700] opacity-50 animate-pulse"></div>
+            <div className="z-0 lg:p-40 p-44 rounded-full absolute lg:top-52 top-32 bg-gradient-to-t from-[#FFD700] dark:from-[#E5E5E5] opacity-50 animate-pulse"></div>
 
             {/* Left Cloud Animation */}
             <div className="absolute left-10 top-0 flex flex-col items-start">
@@ -107,6 +106,7 @@ export default function Home({
           setCursorColor={setCursorColor}
           logoEnter={socialEnter}
         />
+
         {/* Services */}
         <Services />
         {/* Services */}
@@ -115,6 +115,7 @@ export default function Home({
       {/* Projects */}
       <div className="z-0">
         <Project />
+        
       </div>
       {/* Projects */}
       {/* Contact */}

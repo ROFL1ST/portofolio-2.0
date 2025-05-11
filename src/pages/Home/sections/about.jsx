@@ -13,9 +13,9 @@ export default function About() {
       <Parallax strength={300}>
         <div
           id="about"
-          className="w-full h-full flex justify-center flex-col items-start py-32 pb-36 lg:px-20 px-10 gap-y-10 rounded-b-3xl" // Add rounded bottom here
+          className="w-full bg-night-sky dark:bg-[#070F2B] h-full flex justify-center flex-col items-start py-32 pb-36 lg:px-20 px-10 gap-y-10 rounded-b-3xl" // Add rounded bottom here
           style={{
-            background: "radial-gradient(circle at bottom, #001524, #000C19)",
+           
             zIndex: 1,
             position: "relative",
             borderBottomLeftRadius: "2rem", // Add rounded corners for bottom left
@@ -28,7 +28,7 @@ export default function About() {
           <Title textTop={"Learn"} textBottom={"About Me"} />
           {/* title */}
           <div className=" flex flex-col  lg:w-4/5">
-            <p className="text-white font-semibold text-lg pb-20 w-11/12">
+            <p className="text-white dark:text-[#E5E5E5] font-semibold text-lg pb-20 w-11/12">
               Hi, I’m Danendra. I’m a Front End Developer and Android Developer
               based on Jakarta. As a recent computer science graduate with six
               months of experience at a startup company, I am excited to bring
@@ -38,7 +38,7 @@ export default function About() {
             </p>
             <div className="lg:justify-between justify-center flex flex-col lg:flex-row w-full">
               <div className="lg:w-1/3 left">
-                <h1 className="text-white font-semibold text-2xl">
+                <h1 className="text-white dark:text-[#E5E5E5] font-semibold text-2xl">
                   Experiences
                 </h1>
                 <div className="grid grid-rows-2 w-full gap-x-32 items-center mt-10 lg:mb-0 mb-10">
@@ -51,7 +51,7 @@ export default function About() {
                 </div>
               </div>
               <div className=" lg:w-1/3 w-full">
-                <h1 className="text-white font-semibold text-2xl">Skills</h1>
+                <h1 className="text-white dark:text-[#E5E5E5] font-semibold text-2xl">Skills</h1>
                 <div className="grid lg:grid-cols-4 grid-cols-3 relative gap-5 mt-10 ">
                   {SkillsData.map((i, key) => (
                     <>
@@ -59,7 +59,7 @@ export default function About() {
                         <div className="kotak1 p-5 rounded-2xl bg-[#080E14]  flex justify-center items-center">
                           <img className="max-w-[60px] min-w-[20px]" src={i.image} alt="" />
                         </div>
-                        <p className="text-white font-bold text-base mt-2">
+                        <p className="text-white dark:text-[#E5E5E5] font-bold text-base mt-2">
                           {i.name}
                         </p>
                       </div>
