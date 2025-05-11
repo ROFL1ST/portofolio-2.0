@@ -21,7 +21,7 @@ const DarkModeToggle = () => {
             exit={{ opacity: 0, scale: 0.5, rotate: -90 }}
             transition={{ duration: 0.3 }}
           >
-            <SunIcon className="h-10 text-yellow-500" />
+            <MoonIcon className="h-10 text-yellow-500" />
           </motion.div>
         ) : (
           <motion.div
@@ -31,7 +31,7 @@ const DarkModeToggle = () => {
             exit={{ opacity: 0, scale: 0.5, rotate: 90 }}
             transition={{ duration: 0.3 }}
           >
-            <MoonIcon className="h-10 text-yellow-500" />
+            <SunIcon className="h-10 text-yellow-500" />
           </motion.div>
         )}
       </AnimatePresence>
