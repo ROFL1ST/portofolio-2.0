@@ -3,7 +3,7 @@ import "./App.css";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import { motion, useScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
