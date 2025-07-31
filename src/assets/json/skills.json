@@ -44,5 +44,10 @@
         "id" : 8,
         "name" : "TypeScript",
         "image" : "/assets/icons/typescript-svgrepo-com.svg"
+    },
+    {
+        "id" : 9,
+        "name" : "Golang",
+        "image" : "/assets/icons/go-svgrepo-com.svg"
     }
 ]

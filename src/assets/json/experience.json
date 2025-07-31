@@ -1,14 +1,16 @@
 [
+  
+ 
   {
     "id": 1,
-    "dateFrom": "2022-08-01T00:00:00Z",
-    "dateUntil": "2023-01-01T00:00:00Z",
-    "title": "IT Developer (Internship)",
-    "company": "Pt. Graha Digital Pratama",
+    "dateFrom": "2024-09-01T00:00:00Z",
+    "dateUntil": "2025-07-03T00:00:00Z",
+    "title": "IT Developer (Part Time)",
+    "company": "PT Viktorindo Prima",
     "place": "Jakarta, Indonesia",
-    "desc": "Experienced IT developer with six months of experience at Pt. Graha Digital Pratama, where I was responsible for developing websites and applications using React JS and Flutter."
+    "desc": "I am an IT Developer at PT Viktorindo Prima. I am responsible for developing the front-end design of the company's website. And also participates in the development of the ASN Web Project and Fazzvisa Web Project."
   },
-  {
+   {
     "id": 2,
     "dateFrom": "2024-07-01T00:00:00Z",
     "dateUntil": "2024-11-01T00:00:00Z",
@@ -19,11 +21,11 @@
   },
   {
     "id": 3,
-    "dateFrom": "2024-09-01T00:00:00Z",
-    "dateUntil": "2025-07-03T00:00:00Z",
-    "title": "IT Developer (Part Time)",
-    "company": "PT Viktorindo Prima",
+    "dateFrom": "2022-08-01T00:00:00Z",
+    "dateUntil": "2023-01-01T00:00:00Z",
+    "title": "IT Developer (Internship)",
+    "company": "Pt. Graha Digital Pratama",
     "place": "Jakarta, Indonesia",
-    "desc": "I am an IT Developer at PT Viktorindo Prima. I am responsible for developing the front-end design of the company's website. And also participates in the development of the ASN Web Project and Fazzvisa Web Project."
+    "desc": "Experienced IT developer with six months of experience at Pt. Graha Digital Pratama, where I was responsible for developing websites and applications using React JS and Flutter."
   }
 ]
